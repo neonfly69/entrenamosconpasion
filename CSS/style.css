@@ -1,40 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  background-color: #ffffff; /* Cambia al color de fondo deseado */
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.box {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  flex: 1 1 200px;
-}
-
-.box h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.countdown {
-  font-size: 36px;
-  font-weight: bold;
-  color: #007bff;
-}
-
-/* Estilos para el temporizador */
 .timer {
   display: flex;
   justify-content: space-around;
@@ -45,14 +13,16 @@ body {
   padding: 10px; /* Espaciado interior */
 }
 
-/* Estilos para los botones */
-.button {
-  background-color: #007bff; /* Un tono más claro del color de fondo */
-  color: #ffffff; /* Blanco */
-  padding: 5px 10px; /* Espaciado interior */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.timer .number {
+  font-size: 14px; /* Tamaño de fuente para los números de días, horas, minutos, segundos */
+}
+
+.timer .number {
+  font-weight: bold; /* Para hacer los números más destacados */
+}
+
+.timer .number {
+  text-transform: uppercase; /* Para hacer los nombres de días, horas, minutos, segundos en mayúsculas */
 }
 
 /* Estilos para dispositivos móviles */
