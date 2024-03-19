@@ -1,28 +1,40 @@
-// Set the date we're counting down to
-var countDownDate = new Date("00:00:00").getTime();
+// Función para obtener la fecha y hora actual
+function getCurrentDateTime() {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
+  const currentDay = now.getDate();
+  const midnight = new Date(currentYear, currentMonth, currentDay, 24, 0, 0); // Medianoche
+  return midnight.getTime();
+}
 
-// Update the countdown every second
-var x = setInterval(function() {
-
-  // Get the current date and time
-  var now = new Date().getTime();
-
-  // Calculate the remaining time
-  var distance = countDownDate - now;
-
-  // Calculate days, hours, minutes, and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the countdown in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the countdown is over, display a message
+// Función para calcular la distancia hasta la medianoche
+function calculateDistanceToMidnight() {
+  const now = new Date().getTime();
+  const midnight = getCurrentDateTime();
+  let distance = midnight - now;
   if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    // Si ya es medianoche, suma un día
+    const tomorrowMidnight = new Date(midnight);
+    tomorrowMidnight.setDate(tomorrowMidnight.getDate() + 1);
+    distance = tomorrowMidnight.getTime() - now;
   }
-}, 1000);
+  return distance;
+}
+
+// Actualiza el temporizador cada segundo
+function updateTimer() {
+  const distance = calculateDistanceToMidnight();
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById('countdown').innerHTML = `
+    ${days} días ${hours} horas ${minutes} minutos ${seconds} segundos restantes`;
+}
+
+// Actualiza el temporizador inicial
+updateTimer();
+
+// Actualiza el temporizador cada segundo
+setInterval(updateTimer, 1000);
