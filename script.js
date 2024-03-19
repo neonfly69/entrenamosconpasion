@@ -1,4 +1,3 @@
-// Función para obtener la fecha y hora actual
 function getCurrentDateTime() {
   const now = new Date();
   const currentYear = now.getFullYear();
@@ -8,13 +7,11 @@ function getCurrentDateTime() {
   return midnight.getTime();
 }
 
-// Función para calcular la distancia hasta la medianoche
 function calculateDistanceToMidnight() {
   const now = new Date().getTime();
   const midnight = getCurrentDateTime();
   let distance = midnight - now;
   if (distance < 0) {
-    // Si ya es medianoche, suma un día
     const tomorrowMidnight = new Date(midnight);
     tomorrowMidnight.setDate(tomorrowMidnight.getDate() + 1);
     distance = tomorrowMidnight.getTime() - now;
@@ -22,19 +19,17 @@ function calculateDistanceToMidnight() {
   return distance;
 }
 
-// Actualiza el temporizador cada segundo
 function updateTimer() {
   const distance = calculateDistanceToMidnight();
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById('countdown').innerHTML = `
-    ${days} días ${hours} horas ${minutes} minutos ${seconds} segundos restantes`;
+  document.getElementById('days').innerHTML = days;
+  document.getElementById('hours').innerHTML = hours;
+  document.getElementById('minutes').innerHTML = minutes;
+  document.getElementById('seconds').innerHTML = seconds;
 }
 
-// Actualiza el temporizador inicial
 updateTimer();
-
-// Actualiza el temporizador cada segundo
 setInterval(updateTimer, 1000);
