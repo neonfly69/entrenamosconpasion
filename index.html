@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temporizador de Medianoche</title>
+  <title>Temporizador</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="timer">
+    <div class="day">
+      <div class="number">Días</div>
+      <div id="days">0</div>
+    </div>
+    <div class="hour">
+      <div class="number">Horas</div>
+      <div id="hours">0</div>
+    </div>
+    <div class="minute">
+      <div class="number">Minutos</div>
+      <div id="minutes">0</div>
+    </div>
+    <div class="second">
+      <div class="number">Segundos</div>
+      <div id="seconds">0</div>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="box">
-    <h2>Día</h2>
-    <div id="days" class="countdown"></div>
-  </div>
-  <div class="box">
-    <h2>Hora</h2>
-    <div id="hours" class="countdown"></div>
-  </div>
-  <div class="box">
-    <h2>Minuto</h2>
-    <div id="minutes" class="countdown"></div>
-  </div>
-  <div class="box">
-    <h2>Segundo</h2>
-    <div id="seconds" class="countdown"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
