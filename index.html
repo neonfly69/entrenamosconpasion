@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temporizador</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="timer">
-    <div class="day">
-      <div class="number">Día</div>
-      <div id="days">0</div>
+    <div class="temporizador">
+        <div class="dia">
+            <span id="dias"></span>
+            <div>Día</div>
+        </div>
+        <div class="hora">
+            <span id="horas"></span>
+            <div>Hora</div>
+        </div>
+        <div class="minuto">
+            <span id="minutos"></span>
+            <div>Minuto</div>
+        </div>
+        <div class="segundo">
+            <span id="segundos"></span>
+            <div>Segundo</div>
+        </div>
     </div>
-    <div class="hour">
-      <div class="number">Hora</div>
-      <div id="hours">0</div>
-    </div>
-    <div class="minute">
-      <div class="number">Minuto</div>
-      <div id="minutes">0</div>
-    </div>
-    <div class="second">
-      <div class="number">Segundo</div>
-      <div id="seconds">0</div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
