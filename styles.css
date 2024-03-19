@@ -11,12 +11,14 @@ body {
 
 .temporizador {
     display: flex;
+    flex-wrap: wrap; /* Permite que los cuadros se envuelvan en dispositivos pequeños */
+    justify-content: center; /* Centra los cuadros */
 }
 
 .cuadro {
-    width: 100px;
+    width: calc(50% - 20px); /* El 50% del ancho menos el margen */
     height: 120px;
-    margin-right: 20px;
+    margin: 10px; /* Espacio entre los cuadros */
     text-align: center;
     border-radius: 10px;
 }
