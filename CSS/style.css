@@ -33,3 +33,32 @@ body {
   font-weight: bold;
   color: #007bff;
 }
+
+/* Estilos para el temporizador */
+.timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1a1a; /* Azul oscuro o verde oscuro */
+  color: #ffffff; /* Blanco o plateado */
+  font-size: 24px; /* Tamaño de fuente adecuado */
+  padding: 10px; /* Espaciado interior */
+}
+
+/* Estilos para los botones */
+.button {
+  background-color: #007bff; /* Un tono más claro del color de fondo */
+  color: #ffffff; /* Blanco */
+  padding: 5px 10px; /* Espaciado interior */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .timer {
+    flex-direction: row; /* Mantener el diseño horizontal en dispositivos móviles */
+    font-size: 20px; /* Tamaño de fuente ligeramente más pequeño para dispositivos móviles */
+  }
+}
