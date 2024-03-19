@@ -13,24 +13,33 @@ body {
     display: flex;
 }
 
-.temporizador > div {
+.cuadro {
+    width: 100px;
+    height: 120px;
     margin-right: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
-.temporizador .dia,
-.temporizador .hora,
-.temporizador .minuto,
-.temporizador .segundo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.dia {
+    background-color: #FF7F50; /* Color naranja */
+}
+
+.hora {
+    background-color: #7B68EE; /* Color púrpura */
+}
+
+.minuto {
+    background-color: #32CD32; /* Color verde */
+}
+
+.segundo {
+    background-color: #FFD700; /* Color dorado */
 }
 
 .temporizador span {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .temporizador div {
