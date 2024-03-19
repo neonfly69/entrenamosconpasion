@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3; /* Color de fondo */
+}
+
+.temporizador {
+    display: flex;
+}
+
+.temporizador > div {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.temporizador .dia,
+.temporizador .hora,
+.temporizador .minuto,
+.temporizador .segundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temporizador span {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.temporizador div {
+    font-size: 18px;
+}
