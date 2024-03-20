@@ -42,11 +42,11 @@ body {
     background-color: #0000FF; /* Azul eléctrico */
 }
 
-.dia, .minuto {
+.dia, .minuto, .segundo {
     color: #FFFFFF; /* Blanco */
 }
 
-.hora, .segundo {
+.hora {
     color: #000000; /* Negro */
 }
 
