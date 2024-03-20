@@ -27,19 +27,19 @@ body {
 }
 
 .dia {
-    background-color: #FF7F50; /* Color naranja */
+    background-color: #FF0000; /* Rojo intenso */
 }
 
 .hora {
-    background-color: #7B68EE; /* Color púrpura */
+    background-color: #FFFF00; /* Amarillo brillante */
 }
 
 .minuto {
-    background-color: #32CD32; /* Color verde */
+    background-color: #008000; /* Verde esmeralda */
 }
 
 .segundo {
-    background-color: #FFD700; /* Color dorado */
+    background-color: #0000FF; /* Azul eléctrico */
 }
 
 .temporizador span {
